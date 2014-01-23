@@ -8,41 +8,44 @@ angular.module('styleguide', ['ui.bootstrap'])
     {
       less: 'green',
       hex: '#3fb58e',
-      bootstrap: 'primary'
+      bootstrap: '.primary'
     },
-    {
-      less: 'darkgreen',
-      hex: '#328f70'
-    },
+    // {
+    //   less: 'darkgreen',
+    //   hex: '#328f70'
+    // },
     {
       less: 'navy',
       hex: '#013E5F',
-      bootstrap: 'secondary'
+      bootstrap: '.secondary'
+    },
+    {
+      less: 'blue',
+      hex: '#27aae1',
+      bootstrap: '.info'
     },
     {
       less: 'yellow',
-      hex: '#ffcd36'
+      hex: '#ffcd36',
+      bottstrap: '.warning'
     },
     {
-      less: 'lightyellow',
-      hex: '#fff2cc'
-    },
-    {
-      less: 'darkyellow',
-      hex: '#eab514'
+      less: 'red',
+      hex: '#c13832',
+      bootstrap: '.danger'
     },
     {
       less: 'orange',
       hex: '#ee8950'
     },
     {
-      less: 'blue',
-      hex: '#27aae1'
+      less: 'lightyellow',
+      hex: '#fff2cc'
     },
-    {
-      less: 'red',
-      hex: '#c13832'
-    },
+    // {
+    //   less: 'darkyellow',
+    //   hex: '#eab514'
+    // },
     {
       less: 'grey',
       hex: '#4d4e53'
