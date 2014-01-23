@@ -4,7 +4,7 @@ module.exports = function (grunt) {
     less: {
       development: {
         files: {
-          'app/compiled/app.min.css': 'app/less/app.less'
+          'app/dist/makerstrap.min.css': 'app/less/app.less'
         },
         options: {
           sourceMap: true
