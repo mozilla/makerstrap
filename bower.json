@@ -1,0 +1,21 @@
+{
+  "name": "webmaker-events",
+  "version": "0.0.1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.2.8",
+    "angular-route": "1.2.8",
+    "bootstrap": "3.0.3",
+    "angular-resource": "1.2.8",
+    "jquery": "~2.0.3",
+    "angular-bootstrap": "~0.10.0",
+    "font-awesome": "~4.0.3",
+    "angular-masonry": "~0.7.0"
+  }
+}

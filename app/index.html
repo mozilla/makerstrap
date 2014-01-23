@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en" ng-app="styleguide">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+  <title>Makerstrap</title>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="compiled/app.min.css">
+</head>
+<body ng-controller="mainController">
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+    <div class="container">
+
+      <div class="navbar-header">
+
+        <button type="button" class="navbar-toggle" ng-click="isCollapsed = !isCollapsed">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="fa fa-bars fa-fw"></span>
+        </button>
+
+        <a class="navbar-brand" href="#">Makerstrap</a>
+
+      </div>
+
+      <div class="collapse navbar-collapse" collapse="isCollapsed">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Link</a></li>
+          <li><a href="#"><span class="fa fa-book icon-circle"></span> Link</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle">Dropdown <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+              <li class="divider"></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-link">
+            <span class="fa fa-search"></span><span class="sr-only">Search</span>
+          </button>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Link</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div>
+  </nav>
+
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Webmaker Style Guide</h1>
+      <p>Some styles for webmaker's style guide</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="page-header">
+      <h1 section>Colours</h1>
+    </div>
+    <ul class="list-unstyled swatches">
+      <li
+        ng-repeat="colour in colours"
+        class="swatch col-xs-4 col-sm-2 text-center"
+        style="background-color: {{colour.hex}}"
+        tooltip="{{colour.hex}}">
+        <code ng-show="colour.bootstrap">{{colour.bootstrap}}</code>
+        <code ng-hide="colour.bootstrap">@{{colour.less}}</code>
+      </li>
+    </ul>
+  </div>
+<!--
+  <div class="container">
+
+    <div class="page-header">
+      <h1 section>Brand</h1>
+    </div>
+
+    <div class="logo-example">
+      <div class="logo-container">
+        <img class="img-responsive" src="img/logo.png">
+      </div>
+    </div>
+
+  </div> -->
+
+  <div class="container">
+
+    <div class="page-header">
+      <h1 section>Typography</h1>
+    </div>
+
+    <hgroup>
+      <h2>Open Sans</h2>
+      <h3>Regular, Light, and Semi-Bold</h3>
+    </hgroup>
+    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation <a href="#">ullamco laboris nisi</a> ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud <a href="#">exercitation ullamco</a> laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <h3>Better Lists</h3>
+    <p>To use these lists, use the class <code>.list</code></p>
+    <ul class="list">
+      <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        <ul>
+          <li>Some stuff</li>
+          <li>Nunc dignissim risus id metus.</li>
+        </ul>
+      </li>
+      <li>Aliquam tincidunt mauris eu risus.</li>
+      <li>Vestibulum auctor dapibus neque.</li>
+      <li>Nunc dignissim risus id metus.</li>
+      <li>Integer malesuada commodo nulla.</li>
+    </ul>
+    <ol class="list">
+      <li>Cras iaculis ultricies nulla.</li>
+      <li>Donec quis dui at dolor tempor interdum.</li>
+      <li>Vivamus molestie gravida turpis.</li>
+      <li>Fusce lobortis lorem at ipsum semper sagittis.</li>
+      <li>Nam convallis pellentesque nisl.</li>
+      <li>Integer malesuada commodo nulla.</li>
+    </ol>
+
+  </div>
+
+  <div class="container">
+
+    <div class="page-header">
+      <h1 section>Buttons</h1>
+    </div>
+
+    <button type="button" class="btn btn-default">Default</button>
+    <button type="button" class="btn btn-primary">Primary / Success</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="btn btn-info">Info</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-link">Link</button>
+
+    <h3>Responsive buttons</h3>
+
+    <button type="button" class="btn btn-info btn-mb-block">This button is block on mobile</button>
+
+  </div>
+
+  <div class="container">
+    <div class="page-header">
+      <h1 section>Forms</h1>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <h3>Regular form</h3>
+        <form role="form">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputFile">File input</label>
+            <input type="file" id="exampleInputFile">
+            <p class="help-block">Example block-level help text here.</p>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"> Check me out
+            </label>
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <h3>Credit card form</h3>
+        <div class="panel panel-secure">
+          <div class="panel-heading">
+            <span class="fa fa-lock"></span> Payment Information
+          </div>
+          <div class="panel-body">
+            <div class="form-group">
+              <label for="">Name on Card</label>
+              <input type="text" class="form-control">
+            </div>
+            <form role="form">
+              <div class="form-group">
+                <label for="">Credit Card Number</label>
+                <input type="number" class="form-control">
+              </div>
+              <div class="row">
+                <div class="form-group col-xs-6">
+                  <label for="">Expiration</label>
+                  <input type="text" class="form-control" placeholder="MM/YY">
+                </div>
+                <div class="form-group col-xs-6">
+                  <label for="">Security code</label>
+                  <input type="text" class="form-control" placeholder="">
+                  <p class="help-block"><a href="#">What is this?</a></p>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container">
+    <div class="page-header">
+      <h1 section>Gallery</h1>
+    </div>
+  </div> <!-- container -->
+
+<div class="gallery">
+  <div class="container">
+    <h2 class="gallery-title text-primary">This is a gallery! <small>Some other text that's relate her text that's relat her text that's r text that's r text that's r text that's relat her text that's relatd.</small></h2>
+    <div class="row mason">
+      <div ng-repeat="item in gallery" class="gallery-item col-xs-12 col-sm-4 col-lg-3">
+        <div class="thumbnail">
+          <div class="thumbnail-wrapper" style="background-image:url({{item.thumbnail}})"></div>
+          <div class="caption">
+            <h3>{{item.title}}</h3>
+            <p class="text-muted">Created by @{{item.username}}</p>
+            <p>{{item.description}}</p>
+            <p>
+              <a href="#" class="btn btn-primary" role="button">
+                <span class="fa fa-code-fork"></span> Remix
+              </a>
+              <a href="#" class="btn btn-danger" role="button">
+                <span class="fa fa-heart"></span><span class="sr-only">Like</span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <footer class="wm-footer">
+    <div class="container">
+      <p>Footer...</p>
+    </div>
+  </footer>
+
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+  <script src="http://masonry.desandro.com/masonry.pkgd.min.js"></script>
+  <script src="http://imagesloaded.desandro.com/imagesloaded.pkgd.min.js"></script>
+
+  <script src="js/styleguide.js"></script>
+
+
+</body>
+</html>
