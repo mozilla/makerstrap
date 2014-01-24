@@ -7,7 +7,7 @@
   },
   "ignore": [
     "bower_components/",
-    "node_modules/",2
+    "node_modules/",
     "demo/",
     "Gruntfile.js",
     "Procfile",
