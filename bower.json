@@ -4,5 +4,14 @@
   "version": "0.0.1",
   "dependencies": {
     "bootstrap": "3.0.3"
-  }
+  },
+  "ignore": [
+    "bower_components/",
+    "node_modules/"
+    "demo/",
+    "src/",
+    "Gruntfile.js",
+    "Procfile",
+    "server.js"
+  ]
 }

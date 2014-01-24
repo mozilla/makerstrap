@@ -6,6 +6,7 @@ module.exports = function(grunt) {
       development: {
         files: {
           'makerstrap.min.css': 'src/makerstrap.less',
+          'makerstrap.complete.min.css': 'src/makerstrap.complete.less',
           'demo/css/demo.css': 'demo/css/demo.less'
         },
         options: {
@@ -15,6 +16,7 @@ module.exports = function(grunt) {
       build: {
         files: {
           'makerstrap.min.css': 'src/makerstrap.less',
+          'makerstrap.complete.min.css': 'src/makerstrap.complete.less',
           'demo/css/demo.css': 'demo/css/demo.less'
         },
         options: {
