@@ -11,6 +11,7 @@
     "demo/",
     "Gruntfile.js",
     "Procfile",
-    "server.js"
+    "server.js",
+    "package.json"
   ]
 }
