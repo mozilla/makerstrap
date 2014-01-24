@@ -1,65 +1,52 @@
-module.exports = function (grunt) {
+module.exports = function(grunt) {
 
   grunt.initConfig({
+
     less: {
       development: {
         files: {
-          'app/dist/makerstrap.min.css': 'app/less/app.less'
+          'makerstrap.min.css': 'src/makerstrap.less',
+          'demo/css/demo.css': 'demo/css/demo.less'
         },
         options: {
           sourceMap: true
         }
+      },
+      build: {
+        files: {
+          'makerstrap.min.css': 'src/makerstrap.less',
+          'demo/css/demo.css': 'demo/css/demo.less'
+        },
+        options: {
+          compress: true
+        }
+
       }
     },
+
+    develop: {
+      server: {
+        file: 'server.js'
+      }
+    },
+
     watch: {
       less: {
-        files: ['app/less/**/*.less'],
-        tasks: ['less:development']
-      }
-    },
-    shell: {
-      runServer: {
+        files: ['src/**/*.less'],
+        tasks: ['less:development'],
         options: {
-          async: true
-        },
-        command: 'node server/server.js'
-      }
-    },
-    jshint: {
-      all: ['Gruntfile.js', 'app/js/**/*.js'],
-      options: {
-        jshintrc: '.jshintrc'
-      }
-    },
-    jsbeautifier: {
-      modify: {
-        src: ['Gruntfile.js', 'app/js/**/*.js'],
-        options: {
-          config: '.jsbeautifyrc'
-        }
-      },
-      validate: {
-        src: ['Gruntfile.js', 'app/js/**/*.js'],
-        options: {
-          mode: 'VERIFY_ONLY',
-          config: '.jsbeautifyrc'
+          spawn: false
         }
       }
     }
+
   });
 
   grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.loadNpmTasks('grunt-shell-spawn');
-  grunt.loadNpmTasks('grunt-jsbeautifier');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-develop');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
-  grunt.registerTask('default', ['shell:runServer', 'watch']);
-
-  // Clean code before a commit
-  grunt.registerTask('clean', ['jsbeautifier:modify', 'jshint']);
-
-  // Validate code (read only)
-  grunt.registerTask('validate', ['jsbeautifier:validate', 'jshint']);
+  grunt.registerTask('default', ['less:development', 'develop', 'watch' ]);
+  grunt.registerTask('build', ['less:build']);
 
 };
