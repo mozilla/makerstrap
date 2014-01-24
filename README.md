@@ -8,9 +8,9 @@ bower install makerstrap
 
 ## How lazy are you?
 
-### Reeeeal frikin lazy
+### Real frikin lazy
 
-`makerstrap.complete.min Includes `@import`ed css and fonts for Font Awesome and Open Sans
+Includes Font Awesome and Open Sans automagically. Don't use this in production please.
 
 ```html
 <link rel="stylesheet" href="bower_components/makerstrap/makerstrap.complete.min.css">
@@ -19,15 +19,18 @@ bower install makerstrap
 ### Somewhat lazy
 
 ```html
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700" rel="stylesheet">
+
 <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-<link rel="stylesheet" href="bower_components/makerstrap/makerstrap.min.css">
+
+<link href="bower_components/makerstrap/makerstrap.min.css" rel="stylesheet">
 ```
 
-### Actually I'm a ninja hit me
+### Actually, I'm a ninja, hit me
 
-(LESS)
-```
+This is for less importing:
+
+```css
 @makerstrap-bower-path: '../bower_components';
 @import 'bower_components/makerstrap/less/makerstrap';
 
