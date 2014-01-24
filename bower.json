@@ -1,5 +1,5 @@
 {
-  "name": "webmaker-events",
+  "name": "makerstrap",
   "author": "@k88hudson",
   "version": "0.0.1",
   "dependencies": {
@@ -7,7 +7,7 @@
   },
   "ignore": [
     "bower_components/",
-    "node_modules/",
+    "node_modules/",2
     "demo/",
     "src/",
     "Gruntfile.js",
