@@ -5,3 +5,15 @@ body {
 h1[section] {
   padding-top: 30px;
 }
+
+.swatch {
+  padding: 20px;
+  code {
+    transition: opacity 0.2s ease-out;
+  }
+  &:hover {
+    code {
+      opacity: 0.1;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+/*********************************************************
+* Hanging (aka correct) Lists
+*/
+
+// People, hang your punctuation.
+// Usage: add .list to ol, ul
+
+@media (min-width: @grid-float-breakpoint) {
+  .list {
+
+    padding-left: 0;
+    margin-left: 0;
+
+    ul, ol {
+      padding-left: 16px;
+    }
+
+    li {
+      position: relative;
+      list-style: none;
+      &:before {
+        position: absolute;
+        right: 100%;
+        margin-right: 12px;
+        color: #999;
+      }
+    }
+  }
+
+  ul.list li:before {
+    content: '\2022';
+  }
+
+  ol.list {
+    counter-reset: ol-li;
+    li:before {
+      text-align: right;
+      display: block;
+      content: counter(ol-li) '.';
+      counter-increment: ol-li;
+    }
+  }
+}

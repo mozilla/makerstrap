@@ -9,7 +9,6 @@
     "bower_components/",
     "node_modules/",2
     "demo/",
-    "src/",
     "Gruntfile.js",
     "Procfile",
     "server.js"

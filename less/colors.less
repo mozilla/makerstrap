@@ -1,0 +1,42 @@
+/*********************************************************
+* Webmaker colours
+*/
+
+@yellow: #ffcd36;
+@lightyellow: #fff2cc;
+@darkyellow: #eab514;
+@orange: #ee8950;
+@darkgreen: #328f70;
+@blue: #27aae1;
+@red: #EB5D52; // I lightened and desaturated this a bit -k88
+@green: #3fb58e;
+@grey: #4d4e53;
+@lightgrey: #e3eaee;
+@midgrey: #ddd;
+@white: #fff;
+@black: #000;
+@navy: #013E5F;
+@lightnavy: #01527D;
+
+/*********************************************************
+* Base Bootstrap colours
+*/
+
+@brand-primary: @green;
+@brand-success: @green;
+@brand-warning: @orange;
+@brand-danger: @red;
+@brand-info: @blue;
+
+/*********************************************************
+* Custom colours
+*/
+
+// brand-secondary
+@brand-secondary: @navy;
+@btn-secondary-color: #fff;
+@btn-secondary-bg: @brand-secondary;
+@btn-secondary-border: darken(@btn-secondary-bg, 5%);
+.btn-secondary {
+  .button-variant(@btn-secondary-color; @btn-secondary-bg; @btn-secondary-border);
+}

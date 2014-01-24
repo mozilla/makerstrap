@@ -1,7 +1,7 @@
 node_modules/
 bower_components/
+compiled/
 tmp
 .DS_Store
 .idea
 .env
-makerstrap.dev.min.css

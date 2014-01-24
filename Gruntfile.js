@@ -5,9 +5,7 @@ module.exports = function(grunt) {
     less: {
       development: {
         files: {
-          'makerstrap.min.css': 'src/makerstrap.less',
-          'makerstrap.complete.min.css': 'src/makerstrap.complete.less',
-          'demo/css/demo.css': 'demo/css/demo.less'
+          'compiled/makerstrap.dev.css': 'less/makerstrap.less'
         },
         options: {
           sourceMap: true
@@ -15,9 +13,8 @@ module.exports = function(grunt) {
       },
       build: {
         files: {
-          'makerstrap.min.css': 'src/makerstrap.less',
-          'makerstrap.complete.min.css': 'src/makerstrap.complete.less',
-          'demo/css/demo.css': 'demo/css/demo.less'
+          'makerstrap.min.css': 'less/makerstrap.less',
+          'makerstrap.complete.min.css': 'less/makerstrap.complete.less'
         },
         options: {
           compress: true
@@ -34,7 +31,7 @@ module.exports = function(grunt) {
 
     watch: {
       less: {
-        files: ['src/**/*.less'],
+        files: ['less/**/*.less'],
         tasks: ['less:development'],
         options: {
           spawn: false
