@@ -28,7 +28,7 @@ Includes Font Awesome and Open Sans automagically. Don't use this in production 
 
 ### Actually, I'm a ninja, hit me
 
-This is for less importing:
+This is for Less importing:
 
 ```css
 @makerstrap-bower-path: '../bower_components';
