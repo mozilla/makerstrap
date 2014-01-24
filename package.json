@@ -1,6 +1,6 @@
 {
   "name": "makerstrap",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Boostrap theme for Webmaker",
   "main": "server.js",
   "scripts": {
