@@ -1,4 +1,4 @@
-angular.module('styleguide', ['ui.bootstrap'])
+angular.module('styleguide', ['ui.bootstrap', 'hljs'])
 
 .controller('mainController', function($scope) {
 

@@ -13,7 +13,8 @@
     "grunt": "0.4.2",
     "grunt-contrib-less": "0.9.0",
     "grunt-contrib-watch": "0.5.3",
-    "grunt-develop": "~0.3.0"
+    "grunt-develop": "~0.3.0",
+    "grunt-shell-spawn": "~0.3.0"
   },
   "engines": {
     "node": ">=0.10"

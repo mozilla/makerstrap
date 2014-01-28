@@ -5,7 +5,8 @@ module.exports = function(grunt) {
     less: {
       development: {
         files: {
-          'compiled/makerstrap.dev.css': 'less/makerstrap.less'
+          'compiled/makerstrap.dev.css': 'less/makerstrap.less',
+          'demo/css/demo.css': 'demo/css/demo.less'
         },
         options: {
           sourceMap: true
@@ -23,15 +24,18 @@ module.exports = function(grunt) {
       }
     },
 
-    develop: {
-      server: {
-        file: 'server.js'
+    shell: {
+      runServer: {
+        options: {
+          async: true
+        },
+        command: 'node server.js'
       }
     },
 
     watch: {
       less: {
-        files: ['less/**/*.less'],
+        files: ['less/**/*.less', 'demo/css/**/*.less'],
         tasks: ['less:development'],
         options: {
           spawn: false
@@ -42,10 +46,10 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.loadNpmTasks('grunt-develop');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-shell-spawn');
 
-  grunt.registerTask('default', ['less:development', 'develop', 'watch' ]);
+  grunt.registerTask('default', ['less:development', 'shell:runServer', 'watch' ]);
   grunt.registerTask('build', ['less:build']);
 
 };
