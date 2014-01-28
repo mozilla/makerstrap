@@ -5,39 +5,48 @@
 // People, hang your punctuation.
 // Usage: add .list to ol, ul
 
-@media (min-width: @grid-float-breakpoint) {
-  .list {
+@list-padding-left: 15px;
 
+.list {
+
+  margin-left: 0;
+  padding-left: @list-padding-left;
+
+  // Lists should have hanging punctuation, as long as there is padding on the main grid
+  @media (min-width: @grid-float-breakpoint) {
     padding-left: 0;
-    margin-left: 0;
-
-    ul, ol {
-      padding-left: 16px;
-    }
-
-    li {
-      position: relative;
-      list-style: none;
-      &:before {
-        position: absolute;
-        right: 100%;
-        margin-right: 12px;
-        color: #999;
-      }
+    &.list-inset {
+      padding-left: @list-padding-left;
     }
   }
 
-  ul.list li:before {
-    content: '\2022';
+  ul, ol {
+    padding-left: @list-padding-left;
   }
 
-  ol.list {
-    counter-reset: ol-li;
-    li:before {
-      text-align: right;
-      display: block;
-      content: counter(ol-li) '.';
-      counter-increment: ol-li;
+  li {
+    position: relative;
+    list-style: none;
+    &:before {
+      min-width: @list-padding-left;
+      margin-left: -@list-padding-left;
+      position: absolute;
+      right: 100%;
+      color: #999;
     }
+  }
+}
+
+ul.list li:before {
+  content: '\2022';
+}
+
+ol.list {
+  counter-reset: ol-li;
+  li:before {
+    text-align: right;
+    content: counter(ol-li) '.';
+    counter-increment: ol-li;
+    padding-right: (@list-padding-left/2);
   }
 }

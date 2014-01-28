@@ -77,7 +77,7 @@
     <ul class="list-unstyled swatches">
       <li
         ng-repeat="colour in colours"
-        class="swatch col-xs-4 col-sm-2 text-center"
+        class="swatch col-xs-3 col-sm-2 text-center"
         style="background-color: {{colour.hex}}"
         tooltip="{{colour.hex}}">
         <code ng-show="colour.bootstrap">{{colour.bootstrap}}</code>
@@ -85,20 +85,6 @@
       </li>
     </ul>
   </div>
-<!--
-  <div class="container">
-
-    <div class="page-header">
-      <h1 section>Brand</h1>
-    </div>
-
-    <div class="logo-example">
-      <div class="logo-container">
-        <img class="img-responsive" src="img/logo.png">
-      </div>
-    </div>
-
-  </div> -->
 
   <div class="container">
 
@@ -106,54 +92,118 @@
       <h1 section>Typography</h1>
     </div>
 
-    <div hljs>
-<a href="hi"></a>
+
+
+    <div class="row">
+
+      <div class="col-xs-6">
+        <hgroup>
+          <h2>Open Sans</h2>
+          <h3>Regular, <em>Italic</em>, <span class="text-light">Light</span>, and <strong>Semi-Bold</strong></h3>
+        </hgroup>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation <a href="#">ullamco laboris nisi</a> ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud <a href="#">exercitation ullamco</a> laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div class="col-xs-6">
+        <p>Use <code>hgroup</code> to combine multiple headers into a single block.</p>
+        <div hljs>
+<hgroup>
+  <h2>Open Sans</h2>
+  <h3>
+    Regular,
+    <em>Italic</em>,
+    <span class="text-light">Light</span>, and
+    <strong>Semi-Bold</strong>
+  </h3>
+</hgroup></div>
+
+      <p>For slightly larger lead paragraphs, use the class <code>lead</code></p>
+      <div hljs>
+<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p></div>
+
+      <table class="table">
+        <tr>
+          <td><code>&lt;strong&gt;...&lt;/strong&gt;</code></td>
+          <td><strong>bold</strong></td>
+        </tr>
+        <tr>
+          <td><code>em</code></td>
+          <td><em>italic text</em></td>
+        </tr>
+        <tr>
+          <td><code>text-light</code></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><code></code></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><code></code></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><code></code></td>
+          <td></td>
+        </tr>
+      </table>
+      </div>
     </div>
-    <hgroup>
-      <h2>Open Sans</h2>
-      <h3>Regular, Light, and Semi-Bold</h3>
-    </hgroup>
-    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation <a href="#">ullamco laboris nisi</a> ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud <a href="#">exercitation ullamco</a> laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-    <h3>Better Lists</h3>
-    <p>To use these lists, use the class <code>.list</code></p>
-    <ul class="list">
-      <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        <ul>
-          <li>Some stuff</li>
+
+    <h2>Better Lists</h2>
+
+    <div class="example row">
+      <div class="col-xs-6">
+        <p>Use the class <code>list</code> for lists with hanging punctuation and <code>list list-inset</code> for lists inside call-outs, boxes, or panels.</p>
+
+        <ul class="list list-inset">
+          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <ul>
+              <li>Some stuff</li>
+              <li>Nunc dignissim risus id metus.</li>
+            </ul>
+          </li>
+          <li>Aliquam tincidunt mauris eu risus.</li>
+          <li>Vestibulum auctor dapibus neque.</li>
           <li>Nunc dignissim risus id metus.</li>
+          <li>Integer malesuada commodo nulla.</li>
         </ul>
-      </li>
-      <li>Aliquam tincidunt mauris eu risus.</li>
-      <li>Vestibulum auctor dapibus neque.</li>
-      <li>Nunc dignissim risus id metus.</li>
-      <li>Integer malesuada commodo nulla.</li>
-    </ul>
-    <ol class="list">
-      <li>Cras iaculis ultricies nulla.</li>
-      <li>Donec quis dui at dolor tempor interdum.</li>
-      <li>Vivamus molestie gravida turpis.</li>
-      <li>Fusce lobortis lorem at ipsum semper sagittis.</li>
-      <li>Nam convallis pellentesque nisl.</li>
-      <li>Integer malesuada commodo nulla.</li>
-    </ol>
+        <ol class="list">
+          <li>Cras iaculis ultricies nulla.</li>
+          <li>Donec quis dui at dolor tempor interdum.</li>
+          <li>Vivamus molestie gravida turpis.</li>
+          <li>Fusce lobortis lorem at ipsum semper sagittis.</li>
+          <li>Nam convallis pellentesque nisl.</li>
+          <li>Integer malesuada commodo nulla.</li>
+        </ol>
+      </div>
+      <div class="col-xs-6">
+        <div hljs>
+<ol class="list">
+  <li>...</li>
+</ol>
 
+<ul class="list list-inset">
+  <li>...</li>
+</ul></div><!-- hljs -->
+      </div>
+    </div>
   </div>
 
   <div class="container">
