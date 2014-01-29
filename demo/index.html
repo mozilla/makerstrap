@@ -29,31 +29,19 @@
 
       <div class="collapse navbar-collapse" collapse="isCollapsed">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Link</a></li>
-          <li><a href="#"><span class="fa fa-book icon-circle"></span> Link</a></li>
+          <li class="active"><a href="#installation">Installation</a></li>
           <li class="dropdown">
-            <a class="dropdown-toggle">Dropdown <b class="caret"></b></a>
+            <a class="dropdown-toggle">Docs <b class="caret"></b></a>
             <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-              <li class="divider"></li>
-              <li><a href="#">One more separated link</a></li>
+              <li><a href="#colours">Colours</a></li>
+              <li><a href="#typography">Typography</a></li>
+              <li><a href="#lists">Lists</a></li>
+          <!--     <li class="divider"></li> -->
             </ul>
           </li>
         </ul>
-        <form class="navbar-form navbar-left" role="search">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search">
-          </div>
-          <button type="submit" class="btn btn-link">
-            <span class="fa fa-search"></span><span class="sr-only">Search</span>
-          </button>
-        </form>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Link</a></li>
+          <li><a href="https://github.com/k88hudson/makerstrap"><span class="fa fa-github"></span> k88hudson/makerstrap</a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div>
@@ -67,55 +55,94 @@
   </div>
 
   <div class="container">
-    <div class="alert alert-warning">This style guide is totally still in progress! File issues <a href="https://github.com/k88hudson/makerstrap">on github</a></div>
-  </div>
 
-  <div class="container">
-    <div class="page-header">
-      <h1 section>Colours</h1>
+    <div class="alert alert-warning">
+      This style guide is totally still in progress! File issues <a href="https://github.com/k88hudson/makerstrap/issues">on github</a>
     </div>
-    <ul class="list-unstyled swatches">
+
+    <h1 class="page-header" id="installation">Installation</h1>
+    <div class="row">
+      <div class="col-xs-12">
+        <table class="table table-bordered">
+          <tr>
+            <th>Method</th>
+            <th>Instructions</th>
+          </tr>
+          <tr>
+            <td>Download</td>
+            <td><a class="btn btn-primary" href="https://s3-us-west-2.amazonaws.com/makerstrap/makerstrap.complete.min.css" rel="stylesheet" download>makerstrap.complete.min.css</a></td>
+          </tr>
+          <tr>
+            <td>Thimble</td>
+            <td><a class="btn btn-info" href="https://thimble.webmaker.org/project/34746/edit">
+              starter template</a></td>
+          </tr>
+          <tr>
+            <td>Hosted
+            <p class="text-muted">+ Open Sans, Font Awesome</p></td>
+            <td><div hljs><link href="https://s3-us-west-2.amazonaws.com/makerstrap/makerstrap.complete.min.css" rel="stylesheet"></div></td>
+          </tr>
+          <tr>
+          </tr>
+          <tr>
+            <td>Bower</td>
+            <td><div hljs>bower install makerstrap</div></td>
+          </tr>
+        </table>
+      </div>
+     <!--  <div class="col-sm-4">
+        <p class="lead">These are some easy options to include Makerstrap in your project. For details about advanced usage, see <a href="https://github.com/k88hudson/makerstrap">the readme</a> on github.</p>
+      </div> -->
+    </div>
+
+    <h1 id="colours" class="page-header" section>Colours</h1>
+
+    <ul class="list-unstyled swatches row">
       <li
         ng-repeat="colour in colours"
-        class="swatch col-xs-3 col-sm-2 text-center"
-        style="background-color: {{colour.hex}}"
-        tooltip="{{colour.hex}}">
-        <code ng-show="colour.bootstrap">{{colour.bootstrap}}</code>
-        <code ng-hide="colour.bootstrap">@{{colour.less}}</code>
+        class="swatch col-sm-2"
+        style="background-color: {{colour.hex}}">
+        <div class="swatch-inner">
+          <p ng-show="colour.bootstrap"><code>{{colour.bootstrap}}</code></p>
+          <p><code>@{{colour.less}}</code></p>
+          <p><code>{{colour.hex}}</code></p>
+        </div>
       </li>
     </ul>
-  </div>
 
-  <div class="container">
-
-    <div class="page-header">
-      <h1 section>Typography</h1>
-    </div>
-
-
+    <h1 class="page-header" section>Typography</h1>
 
     <div class="row">
 
-      <div class="col-xs-6">
-        <hgroup>
-          <h2>Open Sans</h2>
-          <h3>Regular, <em>Italic</em>, <span class="text-light">Light</span>, and <strong>Semi-Bold</strong></h3>
-        </hgroup>
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation <a href="#">ullamco laboris nisi</a> ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud <a href="#">exercitation ullamco</a> laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <hgroup>
+              <h2>Open Sans</h2>
+              <h3>Regular, <em>Italic</em>, <span class="text-light">Light</span>, and <strong>Semi-Bold</strong></h3>
+            </hgroup>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation <a href="#">ullamco laboris nisi</a> ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud <a href="#">exercitation ullamco</a> laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <div class="panel-footer text-right">
+            <a target="_blank" href="https://katester.makes.org/thimble/makerstrap-typography/edit" class="btn btn-default"><span class="fa fa-edit"></span> Edit me in thimble</a>
+          </div>
+        </div>
       </div>
-      <div class="col-xs-6">
+      <div class="col-sm-6">
         <p>Use <code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code> etc. for individual headers and <code>hgroup</code> to combine multiple headers into a single block.</p>
+        <div hljs>
+<h1>This is a header!</h1></div>
         <div hljs>
 <hgroup>
   <h2>Open Sans</h2>
@@ -130,67 +157,70 @@
           <th colspan="2">Other helpful text formatting</th>
         </tr>
         <tr>
-          <td><code>&lt;strong&gt;...&lt;/strong&gt;</code></td>
+          <td><code>&lt;strong&gt;bold&lt;/strong&gt;</code></td>
           <td><strong>bold</strong></td>
         </tr>
         <tr>
-          <td><code>&lt;em&gt;...&lt;/em&gt;</code></td>
-          <td><em>italic text</em></td>
+          <td><code>&lt;em&gt;italic&lt;/em&gt;</code></td>
+          <td><em>italic</em></td>
         </tr>
         <tr>
-          <td><code>.text-light</code></td>
-          <td><span class="text-light">light text</span></td>
+          <td><code>&lt;span class="text-light"&gt;light&lt;/span&gt;</code></td>
+          <td><span class="text-light">light</span></td>
         </tr>
         <tr>
-          <td><code>.text-muted</code></td>
-          <td><span class="text-muted">grey text</span></td>
-        </tr>
-        <tr>
-          <td><code></code></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td><code></code></td>
-          <td></td>
+          <td><code>&lt;span class="text-muted"&gt;grey&lt;/span&gt;</code></td>
+          <td><span class="text-muted">grey</span></td>
         </tr>
       </table>
       </div>
     </div>
 
 
-    <h2>Better Lists</h2>
+    <h1 class="page-header" id="lists">Better Lists</h1>
 
     <div class="example row">
       <div class="col-xs-6">
-        <p>Use the class <code>list</code> for lists with hanging punctuation and <code>list list-inset</code> for lists inside call-outs, boxes, or panels.</p>
 
-        <ul class="list list-inset">
-          <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            <ul>
-              <li>Some stuff</li>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <ul class="list list-inset">
+              <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodulpa qui officia deserunt mollit anim id est laborum.
+              </li>
+              <li>Aliquam tincidunt mauris eu risus.</li>
+              <li>Vestibulum auctor dapibus neque.</li>
               <li>Nunc dignissim risus id metus.</li>
+              <li>Integer malesuada commodo nulla.</li>
             </ul>
-          </li>
-          <li>Aliquam tincidunt mauris eu risus.</li>
-          <li>Vestibulum auctor dapibus neque.</li>
-          <li>Nunc dignissim risus id metus.</li>
-          <li>Integer malesuada commodo nulla.</li>
-        </ul>
-        <ol class="list">
-          <li>Cras iaculis ultricies nulla.</li>
-          <li>Donec quis dui at dolor tempor interdum.</li>
-          <li>Vivamus molestie gravida turpis.</li>
-          <li>Fusce lobortis lorem at ipsum semper sagittis.</li>
-          <li>Nam convallis pellentesque nisl.</li>
-          <li>Integer malesuada commodo nulla.</li>
-        </ol>
+            <ol class="list list-inset">
+              <li>Cras iaculis ultricies nulla.</li>
+              <li>Donec quis dui at dolor tempor interdum.
+                <ol class="list list-alphabetical">
+                  <li>Some stuff</li>
+                  <li>Nunc dignissim risus id metus.</li>
+                  <li>Nunc dignissim risus id metus.</li>
+                  <li>Nunc dignissim risus id metus.</li>
+                </ol>
+              </li>
+              <li>Vivamus molestie gravida turpis.</li>
+              <li>Fusce lobortis lorem at ipsum semper sagittis.</li>
+              <li>Nam convallis pellentesque nisl.</li>
+              <li>Integer malesuada commodo nulla.</li>
+            </ol>
+          </div>
+          <div class="panel-footer text-right">
+            <a target="_blank" href="https://katester.makes.org/thimble/makerstrap-lists/edit" class="btn btn-default"><span class="fa fa-edit"></span> Edit me in thimble</a>
+          </div>
+        </div>
+
       </div>
       <div class="col-xs-6">
+        <p>Use the class <code>list</code> for lists with hanging punctuation.</p>
+        <p>Use the classes <code>list list-inset</code> for lists for inset lists.</p>
+        <p>For alphabetical lists, use <code>&lt;ol class="list list-alphabetical"&gt;</code>.</p>
+
+        <div class="alert alert-warning">You should use <a href="http://www.markboulton.co.uk/journal/five-simple-steps-to-better-typography-part-2">hanging punctuation</a> where you can. Only use inset lists inside call-outs, boxes, or panels where there is insufficient margin space.</div>
+
         <div hljs>
 <ol class="list">
   <li>...</li>
@@ -201,32 +231,69 @@
 </ul></div><!-- hljs -->
       </div>
     </div>
-  </div>
 
-  <div class="container">
+    <h1 class="page-header">Buttons</h1>
 
-    <div class="page-header">
-      <h1 section>Buttons</h1>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <p class="buttons-example">
+            <button type="button" class="btn btn-default">Default</button>
+            <button type="button" class="btn btn-primary">
+              <span class="fa fa-check"></span> Primary / Success</button>
+            <button type="button" class="btn btn-secondary">
+              <span class="fa fa-book"></span> Secondary</button>
+            <button type="button" class="btn btn-info">
+              <span class="fa fa-info-circle"></span> Info</button>
+            <button type="button" class="btn btn-warning">
+              <span class="fa fa-exclamation"></span> Warning</button>
+            <button type="button" class="btn btn-danger">
+              <span class="fa fa-exclamation-triangle"></span> Danger</button>
+            <button type="button" class="btn btn-link">Link</button></p>
+            <button type="button" class="btn btn-info btn-mb-block">This button is block on mobile</button></p>
+          </div>
+          <div class="panel-footer text-right">
+            <a target="_blank" href="https://katester.makes.org/thimble/makerstrap-buttons/edit" class="btn btn-default"><span class="fa fa-edit"></span> Edit me in thimble</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-sm-6">
+        <p>You should create buttons with the <code>&lt;button&gt;</code> tag plus one of the colour-specific classes:</p>
+        <table class="table">
+          <tr>
+            <td><code>class="btn btn-default"</code></td>
+            <td><button type="button" class="btn btn-default">Default</button></td>
+          </tr>
+          <tr>
+            <td><code>class="btn btn-primary"</code></td>
+            <td><button type="button" class="btn btn-primary">Primary / Success</button></td>
+          </tr>
+          <tr>
+            <td><code>class="btn btn-secondary"</code></td>
+            <td><button type="button" class="btn btn-secondary">Secondary</button></td>
+          </tr>
+          <tr>
+            <td><code>class="btn btn-info"</code></td>
+            <td><button type="button" class="btn btn-info">Info</button></td>
+          </tr>
+          <tr>
+            <td><code>class="btn btn-warning"</code></td>
+            <td><button type="button" class="btn btn-warning">Warning</button></td>
+          </tr>
+          <tr>
+            <td><code>class="btn btn-danger"</code></td>
+            <td><button type="button" class="btn btn-danger">Danger</button></td>
+          </tr>
+        </table>
+
+        <p>If you want to create buttons that are 100% width on mobile screens, use the class <code>btn-block-mobile</code>.</p>
+
+      </div>
     </div>
 
-    <button type="button" class="btn btn-default">Default</button>
-    <button type="button" class="btn btn-primary">Primary / Success</button>
-    <button type="button" class="btn btn-secondary">Secondary</button>
-    <button type="button" class="btn btn-info">Info</button>
-    <button type="button" class="btn btn-warning">Warning</button>
-    <button type="button" class="btn btn-danger">Danger</button>
-    <button type="button" class="btn btn-link">Link</button>
-
-    <h3>Responsive buttons</h3>
-
-    <button type="button" class="btn btn-info btn-mb-block">This button is block on mobile</button>
-
-  </div>
-
-  <div class="container">
-    <div class="page-header">
-      <h1 section>Forms</h1>
-    </div>
+    <h1 class="page-header">Forms</h1>
 
     <div class="row">
       <div class="col-md-6">
@@ -290,9 +357,9 @@
   </div>
 
   <div class="container">
-    <div class="page-header">
-      <h1 section>Gallery</h1>
-    </div>
+    <h1 class="page-header">
+      Gallery
+    </h1>
   </div> <!-- container -->
 
 <div class="gallery">

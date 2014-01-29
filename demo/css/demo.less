@@ -2,23 +2,40 @@ body {
   padding-top: 50px;
 }
 
-h1[section] {
-  padding-top: 30px;
-}
-
 .swatch {
-  padding: 20px;
-  code {
-    transition: opacity 0.2s ease-out;
+  @media (min-width: 768px) {
+    padding-bottom: 16.666666666666664%;
   }
+  position: relative;
+}
+
+.swatch-inner {
+  padding: 20px;
+  @media (min-width: 768px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  text-align: center;
+  opacity: 0.1;
+  transition: opacity 0.2s ease-out;
   &:hover {
-    code {
-      opacity: 0.1;
-    }
+    opacity: 1;
   }
 }
 
+// hljs
 pre code {
   background: none;
   padding: 0;
+}
+
+.page-header {
+  border-bottom: none;
+}
+
+.buttons-example {
+  line-height: 3;
 }
