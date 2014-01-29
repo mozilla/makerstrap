@@ -11,8 +11,8 @@
   <link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/github.min.css">
   <link rel="stylesheet" href="css/demo.css">
 </head>
-<body ng-controller="mainController">
-  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<body >
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" ng-controller="navController">
 
     <div class="container">
 
@@ -23,20 +23,19 @@
           <span class="fa fa-bars fa-fw"></span>
         </button>
 
-        <a class="navbar-brand" href="#">Makerstrap</a>
+        <a class="navbar-brand" scroll-to>Makerstrap</a>
 
       </div>
 
       <div class="collapse navbar-collapse" collapse="isCollapsed">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#installation">Installation</a></li>
+          <li><a scroll-to="installation" offset="-80">Installation</a></li>
           <li class="dropdown">
             <a class="dropdown-toggle">Docs <b class="caret"></b></a>
             <ul class="dropdown-menu">
-              <li><a href="#colours">Colours</a></li>
-              <li><a href="#typography">Typography</a></li>
-              <li><a href="#lists">Lists</a></li>
-          <!--     <li class="divider"></li> -->
+              <li ng-repeat="choice in docsSections">
+                <a scroll-to="{{choice}}" offset="-80">{{choice}}</a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -54,340 +53,7 @@
     </div>
   </div>
 
-  <div class="container">
-
-    <div class="alert alert-warning">
-      This style guide is totally still in progress! File issues <a href="https://github.com/k88hudson/makerstrap/issues">on github</a>
-    </div>
-
-    <h1 class="page-header" id="installation">Installation</h1>
-    <div class="row">
-      <div class="col-xs-12">
-        <table class="table table-bordered">
-          <tr>
-            <th>Method</th>
-            <th>Instructions</th>
-          </tr>
-          <tr>
-            <td>Download</td>
-            <td><a class="btn btn-primary" href="https://s3-us-west-2.amazonaws.com/makerstrap/makerstrap.complete.min.css" rel="stylesheet" download>makerstrap.complete.min.css</a></td>
-          </tr>
-          <tr>
-            <td>Thimble</td>
-            <td><a class="btn btn-info" href="https://thimble.webmaker.org/project/34746/edit">
-              starter template</a></td>
-          </tr>
-          <tr>
-            <td>Hosted
-            <p class="text-muted">+ Open Sans, Font Awesome</p></td>
-            <td><div hljs><link href="https://s3-us-west-2.amazonaws.com/makerstrap/makerstrap.complete.min.css" rel="stylesheet"></div></td>
-          </tr>
-          <tr>
-          </tr>
-          <tr>
-            <td>Bower</td>
-            <td><div hljs>bower install makerstrap</div></td>
-          </tr>
-        </table>
-      </div>
-     <!--  <div class="col-sm-4">
-        <p class="lead">These are some easy options to include Makerstrap in your project. For details about advanced usage, see <a href="https://github.com/k88hudson/makerstrap">the readme</a> on github.</p>
-      </div> -->
-    </div>
-
-    <h1 id="colours" class="page-header" section>Colours</h1>
-
-    <ul class="list-unstyled swatches row">
-      <li
-        ng-repeat="colour in colours"
-        class="swatch col-sm-2"
-        style="background-color: {{colour.hex}}">
-        <div class="swatch-inner">
-          <p ng-show="colour.bootstrap"><code>{{colour.bootstrap}}</code></p>
-          <p><code>@{{colour.less}}</code></p>
-          <p><code>{{colour.hex}}</code></p>
-        </div>
-      </li>
-    </ul>
-
-    <h1 class="page-header" section>Typography</h1>
-
-    <div class="row">
-
-      <div class="col-sm-6">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <hgroup>
-              <h2>Open Sans</h2>
-              <h3>Regular, <em>Italic</em>, <span class="text-light">Light</span>, and <strong>Semi-Bold</strong></h3>
-            </hgroup>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation <a href="#">ullamco laboris nisi</a> ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud <a href="#">exercitation ullamco</a> laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-          <div class="panel-footer text-right">
-            <a target="_blank" href="https://katester.makes.org/thimble/makerstrap-typography/edit" class="btn btn-default"><span class="fa fa-edit"></span> Edit me in thimble</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6">
-        <p>Use <code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code> etc. for individual headers and <code>hgroup</code> to combine multiple headers into a single block.</p>
-        <div hljs>
-<h1>This is a header!</h1></div>
-        <div hljs>
-<hgroup>
-  <h2>Open Sans</h2>
-  <h3>Regular, Italic, and Semi-Bold</h3>
-</hgroup></div>
-
-      <p>For slightly larger lead paragraphs, use the class <code>lead</code></p>
-      <div hljs>
-<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p></div>
-      <table class="table table-bordered">
-        <tr>
-          <th colspan="2">Other helpful text formatting</th>
-        </tr>
-        <tr>
-          <td><code>&lt;strong&gt;bold&lt;/strong&gt;</code></td>
-          <td><strong>bold</strong></td>
-        </tr>
-        <tr>
-          <td><code>&lt;em&gt;italic&lt;/em&gt;</code></td>
-          <td><em>italic</em></td>
-        </tr>
-        <tr>
-          <td><code>&lt;span class="text-light"&gt;light&lt;/span&gt;</code></td>
-          <td><span class="text-light">light</span></td>
-        </tr>
-        <tr>
-          <td><code>&lt;span class="text-muted"&gt;grey&lt;/span&gt;</code></td>
-          <td><span class="text-muted">grey</span></td>
-        </tr>
-      </table>
-      </div>
-    </div>
-
-
-    <h1 class="page-header" id="lists">Better Lists</h1>
-
-    <div class="example row">
-      <div class="col-xs-6">
-
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <ul class="list list-inset">
-              <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodulpa qui officia deserunt mollit anim id est laborum.
-              </li>
-              <li>Aliquam tincidunt mauris eu risus.</li>
-              <li>Vestibulum auctor dapibus neque.</li>
-              <li>Nunc dignissim risus id metus.</li>
-              <li>Integer malesuada commodo nulla.</li>
-            </ul>
-            <ol class="list list-inset">
-              <li>Cras iaculis ultricies nulla.</li>
-              <li>Donec quis dui at dolor tempor interdum.
-                <ol class="list list-alphabetical">
-                  <li>Some stuff</li>
-                  <li>Nunc dignissim risus id metus.</li>
-                  <li>Nunc dignissim risus id metus.</li>
-                  <li>Nunc dignissim risus id metus.</li>
-                </ol>
-              </li>
-              <li>Vivamus molestie gravida turpis.</li>
-              <li>Fusce lobortis lorem at ipsum semper sagittis.</li>
-              <li>Nam convallis pellentesque nisl.</li>
-              <li>Integer malesuada commodo nulla.</li>
-            </ol>
-          </div>
-          <div class="panel-footer text-right">
-            <a target="_blank" href="https://katester.makes.org/thimble/makerstrap-lists/edit" class="btn btn-default"><span class="fa fa-edit"></span> Edit me in thimble</a>
-          </div>
-        </div>
-
-      </div>
-      <div class="col-xs-6">
-        <p>Use the class <code>list</code> for lists with hanging punctuation.</p>
-        <p>Use the classes <code>list list-inset</code> for lists for inset lists.</p>
-        <p>For alphabetical lists, use <code>&lt;ol class="list list-alphabetical"&gt;</code>.</p>
-
-        <div class="alert alert-warning">You should use <a href="http://www.markboulton.co.uk/journal/five-simple-steps-to-better-typography-part-2">hanging punctuation</a> where you can. Only use inset lists inside call-outs, boxes, or panels where there is insufficient margin space.</div>
-
-        <div hljs>
-<ol class="list">
-  <li>...</li>
-</ol>
-
-<ul class="list list-inset">
-  <li>...</li>
-</ul></div><!-- hljs -->
-      </div>
-    </div>
-
-    <h1 class="page-header">Buttons</h1>
-
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <p class="buttons-example">
-            <button type="button" class="btn btn-default">Default</button>
-            <button type="button" class="btn btn-primary">
-              <span class="fa fa-check"></span> Primary / Success</button>
-            <button type="button" class="btn btn-secondary">
-              <span class="fa fa-book"></span> Secondary</button>
-            <button type="button" class="btn btn-info">
-              <span class="fa fa-info-circle"></span> Info</button>
-            <button type="button" class="btn btn-warning">
-              <span class="fa fa-exclamation"></span> Warning</button>
-            <button type="button" class="btn btn-danger">
-              <span class="fa fa-exclamation-triangle"></span> Danger</button>
-            <button type="button" class="btn btn-link">Link</button></p>
-            <button type="button" class="btn btn-info btn-mb-block">This button is block on mobile</button></p>
-          </div>
-          <div class="panel-footer text-right">
-            <a target="_blank" href="https://katester.makes.org/thimble/makerstrap-buttons/edit" class="btn btn-default"><span class="fa fa-edit"></span> Edit me in thimble</a>
-          </div>
-        </div>
-
-      </div>
-      <div class="col-sm-6">
-        <p>You should create buttons with the <code>&lt;button&gt;</code> tag plus one of the colour-specific classes:</p>
-        <table class="table">
-          <tr>
-            <td><code>class="btn btn-default"</code></td>
-            <td><button type="button" class="btn btn-default">Default</button></td>
-          </tr>
-          <tr>
-            <td><code>class="btn btn-primary"</code></td>
-            <td><button type="button" class="btn btn-primary">Primary / Success</button></td>
-          </tr>
-          <tr>
-            <td><code>class="btn btn-secondary"</code></td>
-            <td><button type="button" class="btn btn-secondary">Secondary</button></td>
-          </tr>
-          <tr>
-            <td><code>class="btn btn-info"</code></td>
-            <td><button type="button" class="btn btn-info">Info</button></td>
-          </tr>
-          <tr>
-            <td><code>class="btn btn-warning"</code></td>
-            <td><button type="button" class="btn btn-warning">Warning</button></td>
-          </tr>
-          <tr>
-            <td><code>class="btn btn-danger"</code></td>
-            <td><button type="button" class="btn btn-danger">Danger</button></td>
-          </tr>
-        </table>
-
-        <p>If you want to create buttons that are 100% width on mobile screens, use the class <code>btn-block-mobile</code>.</p>
-
-      </div>
-    </div>
-
-    <h1 class="page-header">Forms</h1>
-
-    <div class="row">
-      <div class="col-md-6">
-        <h3>Regular form</h3>
-        <form role="form">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputFile">File input</label>
-            <input type="file" id="exampleInputFile">
-            <p class="help-block">Example block-level help text here.</p>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox"> Check me out
-            </label>
-          </div>
-          <button type="submit" class="btn btn-default">Submit</button>
-        </form>
-      </div>
-      <div class="col-md-6">
-        <h3>Credit card form</h3>
-        <div class="panel panel-secure">
-          <div class="panel-heading">
-            <span class="fa fa-lock"></span> Payment Information
-          </div>
-          <div class="panel-body">
-            <div class="form-group">
-              <label for="">Name on Card</label>
-              <input type="text" class="form-control">
-            </div>
-            <form role="form">
-              <div class="form-group">
-                <label for="">Credit Card Number</label>
-                <input type="number" class="form-control">
-              </div>
-              <div class="row">
-                <div class="form-group col-xs-6">
-                  <label for="">Expiration</label>
-                  <input type="text" class="form-control" placeholder="MM/YY">
-                </div>
-                <div class="form-group col-xs-6">
-                  <label for="">Security code</label>
-                  <input type="text" class="form-control" placeholder="">
-                  <p class="help-block"><a href="#">What is this?</a></p>
-                </div>
-              </div>
-              <button type="submit" class="btn btn-default">Submit</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="container">
-    <h1 class="page-header">
-      Gallery
-    </h1>
-  </div> <!-- container -->
-
-<div class="gallery">
-  <div class="container">
-    <h2 class="gallery-title text-primary">This is a gallery! <small>Some other text that's relate her text that's relat her text that's r text that's r text that's r text that's relat her text that's relatd.</small></h2>
-    <div class="row mason">
-      <div ng-repeat="item in gallery" class="gallery-item col-xs-12 col-sm-4 col-lg-3">
-        <div class="thumbnail">
-          <div class="thumbnail-wrapper" style="background-image:url({{item.thumbnail}})"></div>
-          <div class="caption">
-            <h3>{{item.title}}</h3>
-            <p class="text-muted">Created by @{{item.username}}</p>
-            <p>{{item.description}}</p>
-            <p>
-              <a href="#" class="btn btn-primary" role="button">
-                <span class="fa fa-code-fork"></span> Remix
-              </a>
-              <a href="#" class="btn btn-danger" role="button">
-                <span class="fa fa-heart"></span><span class="sr-only">Like</span>
-              </a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
+  <div ng-controller="docsController" ng-view></div>
 
   <footer class="wm-footer">
     <div class="container">
@@ -397,10 +63,11 @@
 
   <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
 
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-route.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
-  <script src="http://pc035860.github.io/angular-highlightjs/angular-highlightjs.min.js"></script>
+  <script src="js/vendor/angular-highlightjs.min.js"></script>
 
   <script src="http://masonry.desandro.com/masonry.pkgd.min.js"></script>
   <script src="http://imagesloaded.desandro.com/imagesloaded.pkgd.min.js"></script>
