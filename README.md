@@ -1,6 +1,6 @@
 # Makerstrap
 
-## Installation
+## Usage
 
 ```
 bower install makerstrap
@@ -35,5 +35,27 @@ This is for Less importing:
 @import 'bower_components/makerstrap/less/makerstrap';
 
 ```
+
+## Contributing
+
+### Development environment
+
+1. Install bower and grunt-cli if you don't have them:
+
+``
+npm install -g bower
+npm install -g grunt-cli
+
+```
+
+2. Clone this repo
+3. Run `npm install` from the root of `makerstrap`.
+4. Run `grunt` to start the dev server and LESS watch task, navigate to `http://localhost:1944/demo` to see the demo page.
+5. The main LESS files are in the `less/` directory.
+6. Read http://getbootstrap.com/css/#less to orient yourself on extending Bootstrap with LESS
+
+
+
+
 
 
