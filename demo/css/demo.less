@@ -2,28 +2,22 @@ body {
   padding-top: 50px;
 }
 
-.swatch {
-  @media (min-width: 768px) {
-    padding-bottom: 16.666666666666664%;
-  }
-  position: relative;
+.swatches {
+  margin-top: 20px;
 }
 
-.swatch-inner {
-  padding: 20px;
-  @media (min-width: 768px) {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-  text-align: center;
-  opacity: 0.1;
-  transition: opacity 0.2s ease-out;
-  &:hover {
-    opacity: 1;
-  }
+.swatch-container {
+  margin-bottom: 20px;
+}
+.swatch {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  margin-right: 20px;
+}
+
+.swatch-white {
+  border: 1px solid #EEE;
 }
 
 // hljs

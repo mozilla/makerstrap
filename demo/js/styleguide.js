@@ -129,7 +129,7 @@ angular.module('styleguide', ['ngRoute', 'ui.bootstrap', 'hljs'])
     $scope.colours = [{
         less: 'green',
         hex: '#3fb58e',
-        bootstrap: '.primary'
+        bootstrap: 'primary'
       },
       // {
       //   less: 'darkgreen',
@@ -138,19 +138,19 @@ angular.module('styleguide', ['ngRoute', 'ui.bootstrap', 'hljs'])
       {
         less: 'navy',
         hex: '#013E5F',
-        bootstrap: '.secondary'
+        bootstrap: 'secondary'
       }, {
         less: 'blue',
         hex: '#27aae1',
-        bootstrap: '.info'
+        bootstrap: 'info'
       }, {
         less: 'yellow',
         hex: '#ffcd36',
-        bottstrap: '.warning'
+        bootstrap: 'warning'
       }, {
         less: 'red',
         hex: '#c13832',
-        bootstrap: '.danger'
+        bootstrap: 'danger'
       }, {
         less: 'orange',
         hex: '#ee8950'
