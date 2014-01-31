@@ -34,23 +34,25 @@
           </tr>
         </table>
       </div>
-     <!--  <div class="col-sm-4">
-        <p class="lead">These are some easy options to include Makerstrap in your project. For details about advanced usage, see <a href="https://github.com/k88hudson/makerstrap">the readme</a> on github.</p>
-      </div> -->
+
     </div>
 
     <h1 id="colours" class="page-header" section>Colours</h1>
 
-    <ul class="list-unstyled swatches row">
+    <p>When using LESS, use variables: e.g. <code>@brand-primary</code> for green. Many components (such as buttons, panels) have variants for the standard brand colours.</p>
+
+    <ul class="list-unstyled swatches clearfix">
       <li
         ng-repeat="colour in colours"
-        class="swatch col-sm-2"
-        style="background-color: {{colour.hex}}">
-        <div class="swatch-inner">
-          <p ng-show="colour.bootstrap"><code>{{colour.bootstrap}}</code></p>
-          <p><code>@{{colour.less}}</code></p>
-          <p><code>{{colour.hex}}</code></p>
-        </div>
+        class="swatch-container pull-left">
+        <div
+          style="background-color:{{colour.hex}}"
+          class="swatch swatch-{{colour.less}}"></div>
+          <p>
+            <span ng-show="colour.bootstrap"><code>@brand-{{colour.bootstrap}}</code></span>
+            <span ng-hide="colour.bootstrap"><code>@{{colour.less}}</code></span><br>
+            <span><code>{{colour.hex}}</code></span>
+          </p>
       </li>
     </ul>
 
