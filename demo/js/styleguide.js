@@ -121,7 +121,11 @@ angular.module('styleguide', ['ngRoute', 'ui.bootstrap', 'hljs'])
     $scope.docsSections = [
       "colours",
       "typography",
-      "lists"
+      "lists",
+      "buttons",
+      "forms",
+      "tables",
+      "gallery"
     ];
 
   })
