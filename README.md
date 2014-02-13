@@ -20,6 +20,8 @@ Includes Font Awesome and Open Sans automagically. *Don't use this in production
 
 ### Somewhat lazy
 
+Includes Font Awesome and Open Sans from a CDN.
+
 ```html
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700" rel="stylesheet">
 
@@ -30,7 +32,7 @@ Includes Font Awesome and Open Sans automagically. *Don't use this in production
 
 ### Actually, I'm a ninja, hit me
 
-This is for Less importing:
+This is for LESS importing:
 
 ```css
 @makerstrap-bower-path: '../bower_components';
@@ -44,10 +46,10 @@ This is for Less importing:
 
 1. Install bower and grunt-cli if you don't have them:
 
-```bash
-npm install -g bower
-npm install -g grunt-cli
-```
+  ```bash
+  npm install -g bower
+  npm install -g grunt-cli
+  ```
 
 2. Clone this repo: `git clone https://github.com/mozilla/makerstrap.git`
 3. Run `npm install` from inside the `makerstrap` directory.
