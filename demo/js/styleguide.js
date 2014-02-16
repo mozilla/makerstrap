@@ -123,6 +123,7 @@ angular.module('styleguide', ['ngRoute', 'ui.bootstrap', 'hljs'])
       "typography",
       "lists",
       "buttons",
+      "alerts",
       "forms",
       "tables",
       "gallery"
