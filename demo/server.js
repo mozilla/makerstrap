@@ -6,9 +6,8 @@ var port = process.env.port || 1944;
 app.use(express.logger('dev'));
 app.use(express.compress());
 
-
-app.get('/makerstrap.min.css', function(req, res) {
-  res.sendfile(__dirname + '/compiled/makerstrap.dev.css');
+app.get('/demo.css', function(req, res) {
+  res.sendfile(__dirname + '/compiled/demo.dev.css');
 });
 
 // Static files

@@ -2,9 +2,9 @@
   "name": "makerstrap",
   "version": "0.0.3",
   "description": "Boostrap theme for Webmaker",
-  "main": "server.js",
+  "main": "less/makerstrap.less",
   "scripts": {
-    "postinstall": "./node_modules/.bin/bower install"
+    "postinstall": "bower install"
   },
   "author": "@k88hudson",
   "devDependencies": {
