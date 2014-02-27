@@ -125,7 +125,8 @@ angular.module('styleguide', ['ngRoute', 'ui.bootstrap', 'hljs'])
       "buttons",
       "forms",
       "tables",
-      "gallery"
+      "gallery",
+      "logo"
     ];
 
   })
