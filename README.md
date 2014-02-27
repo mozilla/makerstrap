@@ -35,8 +35,9 @@ Includes Font Awesome and Open Sans from a CDN.
 This is for LESS importing:
 
 ```css
-@makerstrap-bower-path: '../bower_components';
+
 @import 'bower_components/makerstrap/less/makerstrap';
+@makerstrap-bower-path: '../bower_components';
 
 ```
 
