@@ -238,9 +238,10 @@
       </div>
     </div>
 
+
     <h1 id="alerts" class="page-header" section>Alerts</h1>
 
-    <div class="container">
+    <div class="row">
      <div class="col-md-6">
       <div class="panel panel-default">
       <div class="panel-body">
@@ -361,8 +362,8 @@
     <h1 id="tables" class="page-header" section>Tables</h1>
   </div> <!-- container -->
 
-   <div class="container">
-      <h3>Basic Table</h3>
+  <div class="container">
+    <h3>Basic Table</h3>
     <table class="table">
       <thead>
           <tr>
@@ -397,10 +398,10 @@
      <div class="panel-footer text-right">
       <a target="_blank" href="https://mikev370.makes.org/thimble/makerstrap-basictable/edit" class="btn btn-default"><span class="fa fa-edit"></span> Edit me in thimble</a>
     </div>
-    </div>
+  </div>
 
-    <div class="container">
-      <h3>Hover Table</h3>
+  <div class="container">
+    <h3>Hover Table</h3>
     <table class="table table-hover">
       <thead>
           <tr>
@@ -440,10 +441,11 @@
      <div class="panel-footer text-right">
       <a target="_blank" href="https://mikev370.makes.org/thimble/makerstrap-hovertable/edit" class="btn btn-default"><span class="fa fa-edit"></span> Edit me in thimble</a>
     </div>
-    </div>
+  </div>
 
-      <div class="container">    
-      <h1 id="logo" class="page-header" section>Logo</h1>
+  <div class="container">
+    <h1 id="logo" class="page-header" section>Logo</h1>
+    <div class="row">
       <div class="col-md-6">
       <div class="panel panel-default">
         <div class="panel-body">
@@ -461,8 +463,53 @@
 <img src="../../images/logo.png"></a>
       </div>
 
+      </div>
     </div>
+  </div>
+
+  <div class="container">
+    <h1 id="userInfo" class="page-header" section>User Info</h1>
+  </div>
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+
+      <div class="navbar-header">
+
+        <button type="button" class="navbar-toggle" ng-click="userbarCollapsed = !userbarCollapsed">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="fa fa-bars fa-fw"></span>
+        </button>
+
+        <a class="navbar-brand" href="#">App Name</a>
+      </div>
+
+      <div class="collapse navbar-collapse" collapse="userbarCollapsed">
+        <ul class="nav navbar-nav navbar-left">
+          <li><a>Link</a></li>
+          <li><a>Other link</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+
+          <!-- User info -->
+          <li class="dropdown">
+            <a class="navbar-user-info dropdown-toggle" type="button" data-toggle="dropdown">
+              <img class="user-info-avatar" src="https://stuff.webmaker.org/avatars/webmaker-avatar-44x44.png">
+              Username <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#"><span class="fa fa-th-large"></span> My Makes</a></li>
+              <li><a href="#"><span class="fa fa-cog"> Account Settings</a></li>
+              <li class="divider"></li>
+              <li><a href="#"><span class="fa fa-sign-out"></span> Logout</a></li>
+            </ul>
+          </li>
+          <!-- end user info -->
+
+        </ul>
+      </ul>
+
     </div>
+  </nav>
 
 
   <div class="container">
