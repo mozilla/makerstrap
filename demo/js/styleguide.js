@@ -126,12 +126,16 @@ angular.module('styleguide', ['ngRoute', 'ui.bootstrap', 'hljs'])
       "alerts",
       "forms",
       "tables",
-      "gallery",
-      "logo"
+      "logo",
+      "userInfo",
+      "gallery"
     ];
 
   })
   .controller('docsController', function($scope) {
+
+    $scope.userbarCollapsed = true;
+
     $scope.colours = [{
         less: 'green',
         hex: '#3fb58e',
