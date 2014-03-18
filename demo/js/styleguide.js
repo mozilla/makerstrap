@@ -128,6 +128,7 @@ angular.module('styleguide', ['ngRoute', 'ui.bootstrap', 'hljs'])
       "tables",
       "logo",
       "userInfo",
+      "LESSMixins",
       "gallery"
     ];
 
