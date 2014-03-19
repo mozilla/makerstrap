@@ -14,8 +14,8 @@ module.exports = function(grunt) {
 
       build: {
         files: {
-          'dist/makerstrap.min.css': 'less/makerstrap.less',
-          'dist/makerstrap.complete.min.css': 'less/makerstrap.complete.less',
+          'dist/makerstrap.min.css': 'less/build/makerstrap.less',
+          'dist/makerstrap.complete.min.css': 'less/build/makerstrap.complete.less',
           'demo/compiled/demo.css': 'demo/less/demo.less'
         },
         options: {
