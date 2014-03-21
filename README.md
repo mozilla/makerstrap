@@ -1,6 +1,8 @@
 # Makerstrap
 
-A Bootstrap theme based on Webmaker's style guide
+A Bootstrap theme based on [Webmaker's style guide](https://wiki.mozilla.org/Webmaker/styleguide)
+
+Check out our [demo page](http://mozilla.github.io/makerstrap/demo/#/), which showcases much of what Makerstrap can do.
 
 ## Usage
 
