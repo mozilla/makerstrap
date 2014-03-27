@@ -188,6 +188,51 @@ angular.module('styleguide', ['ngRoute', 'ui.bootstrap', 'hljs'])
       }, {
         less: 'black',
         hex: '#000'
+      }, {
+        less: 'literacy-color-navigation',
+        hex: '#ff4e1f'
+      }, {
+        less: 'literacy-color-web-mechanics',
+        hex: '#ff6969'
+      }, {
+        less: 'literacy-color-search',
+        hex: '#fe4040'
+      }, {
+        less: 'literacy-color-credibility',
+        hex: '#ff5984'
+      }, {
+        less: 'literacy-color-security',
+        hex: '#ff004e'
+      }, {
+        less: 'literacy-color-composing',
+        hex: '#01bc85'
+      }, {
+        less: 'literacy-color-remixing',
+        hex: '#00ceb8'
+      }, {
+        less: 'literacy-color-design-accessibility',
+        hex: '#6ecba9'
+      }, {
+        less: 'literacy-color-coding-scripting',
+        hex: '#00967f'
+      }, {
+        less: 'literacy-color-infrastructure',
+        hex: '#09b773'
+      }, {
+        less: 'literacy-color-sharing',
+        hex: '#739ab1'
+      }, {
+        less: 'literacy-color-collaborating',
+        hex: '#506b7b'
+      }, {
+        less: 'literacy-color-community-participation',
+        hex: '#63cfea'
+      }, {
+        less: 'literacy-color-privacy',
+        hex: '#00bad6'
+      }, {
+        less: 'literacy-color-open-practices',
+        hex: '#0097d6'
       }
     ];
 
