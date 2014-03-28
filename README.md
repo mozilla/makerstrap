@@ -1,6 +1,6 @@
 # Makerstrap
 
-A Bootstrap theme based on [Webmaker's style guide](https://wiki.mozilla.org/Webmaker/styleguide)
+**A Bootstrap theme based on [Webmaker's style guide](https://wiki.mozilla.org/Webmaker/styleguide)**
 
 Check out our [demo page](http://mozilla.github.io/makerstrap/demo/#/), which showcases much of what Makerstrap can do.
 
@@ -59,3 +59,7 @@ This is for LESS importing:
 4. Run `grunt` to start the dev server and LESS watch task, navigate to `http://localhost:1944` to see the demo page.
 5. The main LESS files are in the `less/` directory.
 6. Read [http://getbootstrap.com/css/#less](http://getbootstrap.com/css/#less) to orient yourself on extending Bootstrap with LESS.
+
+### Submitting a Pull Request
+
+Be sure to run `grunt build` and commit the generated files to your patch if you modify any of the LESS files. This ensures that people using the library as a dependency will get the latest compiled CSS.
