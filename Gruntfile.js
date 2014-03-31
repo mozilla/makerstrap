@@ -50,7 +50,7 @@ module.exports = function(grunt) {
         mode: 'gzip'
       },
        files: [
-       {expand: true, src: ['dist/.css'], dest: 'dist/', ext: '.gz.js'}
+       {expand: true, src: ['dist/.css'], dest: 'dist/', ext: '.gz.css'}
        ]
      }
    }
