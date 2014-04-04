@@ -42,15 +42,27 @@ module.exports = function(grunt) {
           spawn: false
         }
       }
-    }
+    },
+
+    compress: {
+      main: {
+        options: {
+        mode: 'gzip'
+      },
+       files: [
+       {expand: true, src: ['dist/*.css'], dest: 's3/', ext: ' '}
+       ]
+     }
+   }
 
   });
 
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-shell-spawn');
+  grunt.loadNpmTasks('grunt-contrib-compress');
 
   grunt.registerTask('default', ['less:development', 'shell:runServer', 'watch' ]);
-  grunt.registerTask('build', ['less:build']);
+  grunt.registerTask('build', ['less:build', 'compress']);
 
 };
