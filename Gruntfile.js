@@ -50,7 +50,7 @@ module.exports = function(grunt) {
         mode: 'gzip'
       },
        files: [
-       {expand: true, src: ['dist/.css'], dest: 'dist/', ext: '.gz.css'}
+       {expand: true, src: ['dist/*.css'], dest: 's3/', ext: ' '}
        ]
      }
    }
@@ -60,6 +60,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-shell-spawn');
+  grunt.loadNpmTasks('grunt-contrib-compress');
 
   grunt.registerTask('default', ['less:development', 'shell:runServer', 'watch' ]);
   grunt.registerTask('build', ['less:build', 'compress']);
