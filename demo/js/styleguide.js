@@ -142,10 +142,10 @@ angular.module('styleguide', ['ngRoute', 'ui.bootstrap', 'hljs'])
         hex: '#3fb58e',
         bootstrap: 'primary'
       },
-      // {
-      //   less: 'darkgreen',
-      //   hex: '#328f70'
-      // },
+       {
+         less: 'darkgreen',
+         hex: '#328f70'
+       },
       {
         less: 'navy',
         hex: '#013E5F',
@@ -179,10 +179,12 @@ angular.module('styleguide', ['ngRoute', 'ui.bootstrap', 'hljs'])
       }, {
         less: 'lightgrey',
         hex: '#e3eaee'
-      }, {
-        less: 'midgrey',
-        hex: '#ddd'
-      }, {
+      },
+      //{
+      //  less: 'midgrey',
+      //  hex: '#ddd'
+      // }, 
+      {
         less: 'white',
         hex: '#fff'
       }, {
