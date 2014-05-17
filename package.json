@@ -17,7 +17,8 @@
     "grunt-shell-spawn": "~0.3.0",
     "grunt-contrib-copy": "^0.5.0",
     "time-grunt": "^0.3.1",
-    "grunt-filesize": "0.0.4"
+    "grunt-filesize": "0.0.4",
+    "jit-grunt": "^0.6.0"
   },
   "engines": {
     "node": ">=0.10"
