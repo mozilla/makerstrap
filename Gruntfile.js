@@ -1,4 +1,5 @@
 module.exports = function(grunt) {
+  require('time-grunt')(grunt);
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -24,6 +25,7 @@ module.exports = function(grunt) {
         }
 
       }
+
     },
 
     shell: {
@@ -58,17 +60,31 @@ module.exports = function(grunt) {
         src: '**/*',
         dest: 'deploy/v<%= pkg.version %>/'
       }
+    },
+
+    filesize: {
+      base: {
+        files: [
+          {
+            expand: true,
+            cwd: 'dist/',
+            src: ['*.css']
+          }
+        ]
+      }
     }
 
   });
 
+  grunt.loadNpmTasks('grunt-filesize');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-shell-spawn');
   grunt.loadNpmTasks('grunt-contrib-copy');
 
   grunt.registerTask('default', ['less:development', 'shell:runServer', 'watch' ]);
-  grunt.registerTask('build', ['less:build']);
+  grunt.registerTask('stats', ['less:development', 'filesize']);
+  grunt.registerTask('build', ['less:build', 'filesize']);
   grunt.registerTask('deploy', ['copy']);
 
 };
