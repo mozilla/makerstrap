@@ -1,4 +1,6 @@
+var timer = require('grunt-timer');
 module.exports = function(grunt) {
+  timer.init(grunt);
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -24,6 +26,7 @@ module.exports = function(grunt) {
         }
 
       }
+
     },
 
     shell: {
@@ -68,6 +71,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
 
   grunt.registerTask('default', ['less:development', 'shell:runServer', 'watch' ]);
+  grunt.registerTask('time', ['less:development']);
   grunt.registerTask('build', ['less:build']);
   grunt.registerTask('deploy', ['copy']);
 
