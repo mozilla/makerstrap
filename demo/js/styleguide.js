@@ -150,6 +150,9 @@ angular.module('styleguide', ['ngRoute', 'ui.bootstrap', 'hljs'])
         less: 'navy',
         hex: '#013E5F',
         bootstrap: 'secondary'
+      },{
+        less: 'lightnavy',
+        hex: '#01527D',
       }, {
         less: 'blue',
         hex: '#27aae1',
