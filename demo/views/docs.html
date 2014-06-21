@@ -484,48 +484,104 @@
   </div>
 
   <div class="container">
-    <h1 id="userInfo" class="page-header" section>User Info</h1>
+    <h1 id="navs" class="page-header" section>Navs</h1>
+
+    <h3>Webmaker nav</h3>
   </div>
-  <nav class="navbar navbar-default" role="navigation">
+  <nav class="navbar navbar-webmaker">
     <div class="container">
-
       <div class="navbar-header">
-
-        <button type="button" class="navbar-toggle" ng-click="userbarCollapsed = !userbarCollapsed">
+        <!-- toggle button for mobile -->
+        <button class="navbar-toggle">
           <span class="sr-only">Toggle navigation</span>
-          <span class="fa fa-bars fa-fw"></span>
+          <span class="fa fa-bars fa-lg"></span>
         </button>
-
-        <a class="navbar-brand" href="#">App Name</a>
+        <!-- logo -->
+        <a href="#" class="logo webmaker-logo">
+          <img src="https://webmaker.org/img/logo.png">
+        </a>
       </div>
-
-      <div class="collapse navbar-collapse" collapse="userbarCollapsed">
-        <ul class="nav navbar-nav navbar-left">
-          <li><a>Link</a></li>
-          <li><a>Other link</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-
-          <!-- User info -->
-          <li class="dropdown">
-            <a class="navbar-user-info dropdown-toggle" type="button" data-toggle="dropdown">
-              <img class="user-info-avatar" src="https://stuff.webmaker.org/avatars/webmaker-avatar-44x44.png">
-              Username <span class="caret"></span>
+      <div class="navbar-collapse">
+        <!-- Sign in button -->
+        <form ng-hide="navExLoggedIn" class="navbar-form navbar-right">
+          <button ng-click="navExLoggedIn=true" class="btn btn-primary">Sign in</button>
+        </form>
+        <!-- User info -->
+        <ul ng-show="navExLoggedIn" class="nav navbar-nav navbar-right">
+          <li class="dropdown" href="#" logged-in-only>
+            <a class="navbar-user-info dropdown-toggle" data-toggle="dropdown">
+              <img
+                class="user-info-avatar"
+                src="https://i1.wp.com/stuff.webmaker.org/avatars/webmaker-avatar-200x200.png">
+              Hi <strong>webmaker123</strong>
+              <!-- labels for different user types -->
+              <span class="hidden label label-primary">admin</span>
+              <span class="label label-info">supermentor</span>
+              <span class="hidden label label-warning">mentor</span>
+              <span class="caret"></span>
             </a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="#"><span class="fa fa-th-large"></span> My Makes</a></li>
-              <li><a href="#"><span class="fa fa-cog"> Account Settings</a></li>
+            <ul class="dropdown-menu">
+              <li><a href="#"><span class="fa fa-fw fa-th-large"></span> My makes</a></li>
+              <li><a href="#"><span class="fa fa-fw fa-user"></span> My profile</a></li>
+              <li><a href="#"><span class="fa fa-fw fa-cog"></span> My settings</a></li>
               <li class="divider"></li>
-              <li><a href="#"><span class="fa fa-sign-out"></span> Logout</a></li>
+              <li><a href="#" ng-click="navExLoggedIn=false"><span class="fa fa-fw fa-sign-out"></span>Sign out</a></li>
             </ul>
           </li>
-          <!-- end user info -->
-
         </ul>
-      </ul>
-
+      </div>
     </div>
   </nav>
+
+  <div class="container">
+    <p class="alert alert-info">To see a more complete example including <strong>the language picker</strong> and secondary/tertiary navs, see <a href="./nav.html">nav.html</a></p>
+    <div hljs>
+<nav class="navbar navbar-webmaker">
+  <div class="container">
+    <div class="navbar-header">
+      <!-- toggle button for mobile -->
+      <button class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="fa fa-bars fa-lg"></span>
+      </button>
+      <!-- logo -->
+      <a href="#" class="logo webmaker-logo">
+        <img src="https://webmaker.org/img/logo.png">
+      </a>
+    </div>
+    <div class="navbar-collapse">
+      <!-- Sign in button - you should hide this when the user is logged in.  -->
+      <form class="navbar-form navbar-right">
+        <button data-log-in class="btn btn-primary">Sign in</button>
+      </form>
+      <!-- User info - you should only show this when the user is logged in -->
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown" href="#">
+          <a class="navbar-user-info dropdown-toggle" data-toggle="dropdown">
+            <img
+              class="user-info-avatar"
+              src="https://i1.wp.com/stuff.webmaker.org/avatars/webmaker-avatar-200x200.png">
+            Hi <strong>webmaker123</strong>
+            <!-- labels for different user types -->
+            <span class="hidden label label-primary">admin</span>
+            <span class="label label-info">supermentor</span>
+            <span class="hidden label label-warning">mentor</span>
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#"><span class="fa fa-fw fa-th-large"></span> My makes</a></li>
+            <li><a href="#"><span class="fa fa-fw fa-user"></span> My profile</a></li>
+            <li><a href="#"><span class="fa fa-fw fa-cog"></span> My settings</a></li>
+            <li class="divider"></li>
+            <li><a href="#"><span class="fa fa-fw fa-sign-out"></span>Sign out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    </div>
+  </div>
 
   <div class="container">
     <h1 id="LESSMixins" class="page-header" section>LESS Mixins</h1>

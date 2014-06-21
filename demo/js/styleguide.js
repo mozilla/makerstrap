@@ -127,7 +127,7 @@ angular.module('styleguide', ['ngRoute', 'ui.bootstrap', 'hljs'])
       "forms",
       "tables",
       "logo",
-      "userInfo",
+      "navs",
       "LESSMixins",
       "gallery"
     ];
