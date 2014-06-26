@@ -26,9 +26,17 @@ module.exports = function(grunt) {
         options: {
           compress: true
         }
+      },
 
+      unminified: {
+        files: {
+          'dist/makerstrap.css': 'less/build/makerstrap.less',
+          'dist/makerstrap.complete.css': 'less/build/makerstrap.complete.less',
+        },
+        options: {
+          compress: false
+        }
       }
-
     },
 
     shell: {
@@ -81,7 +89,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', ['less:development', 'shell:runServer', 'watch' ]);
   grunt.registerTask('stats', ['less:development', 'filesize']);
-  grunt.registerTask('build', ['less:build', 'filesize']);
+  grunt.registerTask('build', ['less:build', 'less:unminified', 'filesize']);
   grunt.registerTask('deploy', ['copy']);
 
 };
