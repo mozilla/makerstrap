@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en" ng-app="styleguide">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+  <title>Makerstrap</title>
+
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/github.min.css">
+  <link rel="stylesheet" href="compiled/demo.css">
+</head>
+<body>
+  <nav class="navbar navbar-webmaker">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle" nav-toggle>
+          <span class="sr-only">Toggle navigation</span>
+          <span class="fa fa-bars fa-lg"></span>
+        </button>
+        <a href="#" class="logo webmaker-logo">
+          <img src="https://webmaker.org/img/logo.png">
+        </a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <form class="navbar-form navbar-right">
+          <select class="form-control selectize"></select>
+        </form>
+        <form class="navbar-form navbar-right" logged-out-only>
+          <button data-log-in class="btn btn-primary">
+            Sign in
+          </button>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown" href="#" logged-in-only>
+            <a class="navbar-user-info dropdown-toggle" data-toggle="dropdown">
+              <img
+                class="user-info-avatar"
+                src="https://i1.wp.com/stuff.webmaker.org/avatars/webmaker-avatar-200x200.png">
+              Hi <strong>webmaker123</strong>
+             <span class="hidden label label-primary">admin</span>
+             <span class="label label-info">supermentor</span>
+             <span class="hidden label label-warning">mentor</span>
+             <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#">
+                <span class="fa fa-fw fa-th-large"></span> My makes
+              </a></li>
+              <li><a href="#">
+                <span class="fa fa-fw fa-user"></span> My profile
+              </a></li>
+              <li><a href="#">
+                <span class="fa fa-fw fa-cog"></span> My settings
+              </a></li>
+              <li class="divider"></li>
+              <li><a href="#" data-log-out>
+                <span class="fa fa-fw fa-sign-out"></span>Sign out
+              </a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Secondary nav -->
+  <nav class="navbar navbar-inverse navbar-no-header-xs">
+    <div class="container">
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="nav-icon">
+            <a href="#"><span class="fa fa-random"></span> Explore</a>
+          </li>
+          <li class="nav-icon">
+            <a href="#"><span class="fa fa-book"></span> Resources</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Tertiary nav -->
+  <nav class="navbar navbar-no-header-xs navbar-tertiary">
+    <div class="container">
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="hidden nav-icon nav-title">
+            <a href="#">
+              <span class="fa fa-random"></span> Explore
+            </a>
+          </li>
+          <li class="active"><a href="#">Gallery</a></li>
+          <li><a href="#">Badges</a></li>
+          <li><a href="#">More</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/selectize.js/0.9.0/js/standalone/selectize.js"></script>
+  <script type="text/javascript">
+    // Sign in/out
+    var $login = $('[data-log-in]');
+    var $logout = $('[data-log-out]');
+    var $loggedInOnly = $('[logged-in-only]');
+    var $loggedOutOnly = $('[logged-out-only]');
+    $logout.click(function (e) {
+      e.preventDefault();
+      $loggedInOnly.hide();
+      $loggedOutOnly.show();
+    });
+    $login.click(function (e) {
+      e.preventDefault();
+      $loggedInOnly.show();
+      $loggedOutOnly.hide();
+    });
+    $loggedOutOnly.hide();
+
+    // Collapse
+    $('[nav-toggle]').click(function (e) {
+      e.preventDefault();
+      $('.navbar-collapse').toggleClass('collapse');
+    });
+
+    // Language
+    var href = window.location.pathname;
+    var supportedLanguages = ['en-us', 'fr-ca'];
+    var langmap = {
+      'en-us': {
+        nativeName: 'English',
+        englishName: 'English'
+      },
+      'fr-ca': {
+        nativeName: 'Français',
+        englishName: 'French'
+      }
+    };
+    var currentLang = 'en-us';
+    var options = supportedLanguages.map(function (lang) {
+      return {
+        id: lang,
+        title: langmap[lang] ? langmap[lang].nativeName : lang,
+        english: langmap[lang] && langmap[lang].englishName
+      };
+    });
+    var $select = $('.selectize').selectize({
+      options: options,
+      labelField: 'title',
+      valueField: 'id',
+      searchField: ['title', 'english'],
+      onItemAdd: function (selectedLang) {
+        var matchesLang;
+        var matches = href.match(/([a-z]{2,3})([-]([a-zA-Z]{2}))?/);
+        if (matches) {
+          if (matches[1] && matches[2]) {
+            matchesLang = matches[1].toLowerCase() + matches[2].toUpperCase();
+          } else {
+            matchesLang = matches[1].toLowerCase();
+          }
+        }
+        //if the selected language matches the language in the header
+        if (selectedLang === currentLang) {
+          return;
+          // check if we have any matches and they are exist in the array we have
+        } else if ((matches && matches[0]) && supportedLanguages.indexOf(matchesLang) !== -1) {
+          href = href.replace(matches[0], selectedLang);
+          // This is where you might set window.location = href;
+          console.log(href);
+        } else if (href === '/') {
+          // This is where you might set window.location = '/' + selectedLang;
+          console.log('/' + selectedLang);
+        } else {
+          // This is where you might set window.location = '/' + selectedLang + href;
+          console.log('/' + selectedLang + href);
+        }
+      }
+    });
+    var selectize = $select[0].selectize;
+    selectize.setValue(currentLang);
+  </script>
+</body>
+</html>
