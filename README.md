@@ -14,7 +14,7 @@ bower install makerstrap
 
 ### Real frikin lazy
 
-Includes Font Awesome and Open Sans automagically. *Don't use this in production please.*
+Includes Font Awesome and Open Sans automagically via @import. *Don't use this in production please.*
 
 ```html
 <link rel="stylesheet" href="bower_components/makerstrap/makerstrap.complete.min.css">
