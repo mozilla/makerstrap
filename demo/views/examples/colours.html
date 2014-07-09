@@ -1,0 +1,19 @@
+<h1 id="colours" class="page-header" section>Colours</h1>
+
+<p>When using LESS, use variables: e.g. <code>@brand-primary</code> for green. Many components (such as buttons, panels) have variants for the standard brand colours.</p>
+
+<ul class="list-unstyled swatches clearfix">
+  <li
+    ng-repeat="colour in colours"
+    class="swatch-container pull-left">
+    <div
+      style="background-color:{{colour.hex}}"
+      class="swatch swatch-{{colour.less}}">
+        <p>
+          <span><code>{{colour.hex}}</code></span><br>
+          <span ng-show="colour.bootstrap"><code>@brand-{{colour.bootstrap}}</code></span>
+          <span ng-hide="colour.bootstrap"><code>@{{colour.less}}</code></span><br>
+        </p>
+      </div>
+  </li>
+</ul>
