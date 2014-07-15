@@ -9,7 +9,7 @@
   "author": "@k88hudson",
   "devDependencies": {
     "express": "3.4.8",
-    "bower": "1.2.8",
+    "bower": "1.3.8",
     "grunt": "0.4.2",
     "grunt-contrib-less": "0.10.0",
     "grunt-contrib-watch": "0.5.3",

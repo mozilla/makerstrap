@@ -7,6 +7,11 @@
   .container {
     .navbar-collapse {
       padding-left: 0;
+      @media (max-width: @screen-lg-min) {
+        .navbar-nav {
+          margin: 0;
+        }
+      }
     }
   }
 }
