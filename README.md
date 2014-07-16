@@ -43,6 +43,14 @@ This is for LESS importing:
 
 ```
 
+### I want to see what's under the hood
+
+Includes unminified CSS file so you can tweak and see how all the Makerstrap style properties are working.
+
+```html
+<link href="bower_components/makerstrap/makerstrap.css" rel="stylesheet">
+```
+
 ## Contributing
 
 ### Development environment
