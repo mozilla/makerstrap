@@ -132,3 +132,38 @@ align-items: @align;
 -ms-align-self: @align;
 align-self: @align;
 }
+
+/*********************************************************
+* Ellipses
+*/
+.multi-ellipses(@font-size, @line-height, @lines) {
+  height: @font-size* @line-height * @lines;
+  display: block;
+  display: -webkit-box;
+  font-size: @font-size;
+  line-height: @line-height;
+  -webkit-line-clamp: @lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipses;
+  position: relative;
+  &:after {
+    content: "";
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 25%;
+    height: @line-height * @font-size;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+      background: none;
+      display: none;
+    }
+  }
+}
+.ellipses() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

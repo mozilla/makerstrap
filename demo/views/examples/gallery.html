@@ -4,14 +4,14 @@
 
 <div class="gallery">
   <h2 class="gallery-title text-primary">This is a gallery! <small>Some other text that's relate her text that's relat her text that's r text that's r text that's r text that's relat her text that's relatd.</small></h2>
-  <div mason class="row">
-    <div ng-repeat="item in gallery" class="gallery-item col-xs-12 col-sm-4 col-lg-3">
-      <div class="thumbnail">
-        <div class="thumbnail-wrapper" style="background-image:url({{item.thumbnail}})"></div>
+  <div class="row">
+    <div ng-repeat="item in gallery" class="col-sm-4 col-lg-3">
+      <div class="make">
+        <div class="make-thumbnail" style="background-image:url({{item.thumbnail}})"></div>
         <div class="caption">
-          <h3>{{item.title}}</h3>
-          <p class="text-muted">Created by @{{item.username}}</p>
-          <p>{{item.description}}</p>
+          <h3 class="make-title">{{item.title}}</h3>
+          <p class="make-author text-muted">Created by @{{item.username}}</p>
+          <p class="make-description">{{item.description}}</p>
           <p>
             <a href="#" class="btn btn-primary" role="button">
               <span class="fa fa-code-fork"></span> Remix
