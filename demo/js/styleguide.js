@@ -10,27 +10,6 @@ angular.module('styleguide', ['ngRoute', 'ui.bootstrap', 'hljs'])
     }
   ])
 
-  .directive('mason', ['$window',
-    function($window) {
-      return {
-        restrict: 'EA',
-        link: function(scope, el) {
-          el.masonry = new $window.Masonry(el[0], {
-            itemSelector: '.gallery-item',
-            columnWidth: '.gallery-item',
-            transitionDuration: '0.2s'
-          });
-
-          el.ready(function() {
-             el.masonry.addItems([el]);
-             el.masonry.reloadItems();
-             el.masonry.layout();
-          });
-        }
-      };
-    }
-  ])
-
   // based on https://github.com/iameugenejo/ngScrollTo
   // and https://github.com/alicelieutier/smoothScroll/
   .directive('scrollTo', ['$window',
