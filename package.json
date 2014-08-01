@@ -1,6 +1,6 @@
 {
   "name": "makerstrap",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Boostrap theme for Webmaker",
   "main": "less/makerstrap.less",
   "scripts": {
