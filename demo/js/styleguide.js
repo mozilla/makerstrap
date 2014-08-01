@@ -107,6 +107,7 @@ angular.module('styleguide', ['ngRoute', 'ui.bootstrap', 'hljs'])
       "tables",
       "logo",
       "navs",
+      "videos",
       "LESSMixins",
       "gallery"
     ];
