@@ -2,6 +2,10 @@
   "name": "makerstrap",
   "version": "0.2.3",
   "description": "Boostrap theme for Webmaker",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mozilla/makerstrap.git"
+  },
   "main": "less/makerstrap.less",
   "scripts": {
     "postinstall": "bower install"
