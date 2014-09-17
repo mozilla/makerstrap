@@ -22,3 +22,4 @@ deploy:
   on:
     repo: mozilla/makerstrap
     tags: true
+    all_branches: true
