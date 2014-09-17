@@ -1,7 +1,7 @@
 {
   "name": "makerstrap",
   "author": "@k88hudson",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "dependencies": {
     "bootstrap": "3.1.1",
     "selectize": "0.10.1"
