@@ -163,10 +163,10 @@ angular.module('styleguide', ['ngRoute', 'ui.bootstrap', 'hljs'])
         less: 'lightgrey',
         hex: '#e3eaee'
       },
-      //{
-      //  less: 'midgrey',
-      //  hex: '#ddd'
-      // }, 
+      {
+        less: 'midgrey',
+        hex: '#ddd'
+       }, 
       {
         less: 'white',
         hex: '#fff'
