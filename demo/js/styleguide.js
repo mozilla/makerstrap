@@ -145,10 +145,12 @@ angular.module('styleguide', ['ngRoute', 'ui.bootstrap', 'hljs'])
         less: 'red',
         hex: '#c13832',
         bootstrap: 'danger'
-      }, {
-        less: 'orange',
-        hex: '#ee8950'
-      }, {
+      }, 
+      // {
+      //   less: 'orange',
+      //   hex: '#ee8950'
+      // }, 
+      {
         less: 'lightyellow',
         hex: '#fff2cc'
       },
