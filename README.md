@@ -29,7 +29,7 @@ Includes Font Awesome and Open Sans from a CDN.
 
 <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
-<link href="bower_components/makerstrap/makerstrap.min.css" rel="stylesheet">
+<link href="bower_components/makerstrap/dist/makerstrap.complete.min.css" rel="stylesheet">
 ```
 
 ### Actually, I'm a ninja, hit me
